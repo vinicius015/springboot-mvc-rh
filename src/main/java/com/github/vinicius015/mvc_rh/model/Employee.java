@@ -7,8 +7,9 @@ import java.time.LocalDate;
 
 @Entity
 @Table(name = "employees")
-public class Employee extends AbstractEntity {
-
+public class Employee extends AbstractEntity<String> {
+    @Id
+    private String id;
     @Column(nullable = false)
     private LocalDate startDate;
 

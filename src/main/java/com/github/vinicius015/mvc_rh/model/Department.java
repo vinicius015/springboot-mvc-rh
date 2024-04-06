@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 
 @Entity
 @Table(name = "departments")
-public class Department extends AbstractEntity {
+public class Department extends AbstractEntity<Long> {
 
     @Column(nullable = false, length = 60, unique = true)
     private String nome;

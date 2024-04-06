@@ -9,16 +9,16 @@ import java.io.Serializable;
 import static jakarta.persistence.GenerationType.AUTO;
 
 @MappedSuperclass
-public class AbstractEntity implements Serializable {
+public class AbstractEntity<ID> implements Serializable {
     @Id
     @GeneratedValue(strategy = AUTO)
-    private Long id;
+    private ID id;
 
-    public Long getId() {
+    public ID getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(ID id) {
         this.id = id;
     }
 }

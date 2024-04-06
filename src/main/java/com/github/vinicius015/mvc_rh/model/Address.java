@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 
 @Entity
 @Table(name = "addresses")
-public class Address extends AbstractEntity {
+public class Address extends AbstractEntity<Long> {
 
     @Column(nullable = false, length = 60)
     private String neighborhood;

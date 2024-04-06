@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 
 @Entity
 @Table(name = "roles")
-public class Role extends AbstractEntity {
+public class Role extends AbstractEntity<Long> {
 
     @Column(nullable = false, length = 60, unique = true)
     private String nome;
