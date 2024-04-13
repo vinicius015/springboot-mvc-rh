@@ -21,7 +21,8 @@ public class Address extends AbstractEntity<Long> {
     @Column(nullable = false, length = 150)
     private String address;
 
-    @Column(nullable = false, length = 60)
+    @Column(nullable = false, length = 2)
+    //@Enumerated(EnumType.STRING)
     private String state;
 
     @Column(length = 5)
